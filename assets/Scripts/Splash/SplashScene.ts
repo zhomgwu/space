@@ -18,7 +18,9 @@ export default class SplashScene extends cc.Component {
 
     start () {
         this.schedule(()=> {
-            
+            cc.loader.loadRes("Scene/War", (err, res)=>{
+                cc.director.runScene(res.scene);
+            });
         },5);
     }
 
