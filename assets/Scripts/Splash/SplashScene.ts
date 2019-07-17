@@ -17,12 +17,15 @@ export default class SplashScene extends cc.Component {
     label: cc.Label = null;
 
     start () {
+        // 2秒钟之后切换场景
         this.schedule(()=> {
-            cc.loader.loadRes("Scene/War", (err, res)=>{
-                cc.director.runScene(res.scene);
-            });
-        },5);
+            cc.director.preloadScene("War", null, (error: Error, asset: cc.SceneAsset)=>{
+                cc.director.runSceneImmediate(asset.scene);
+            });    
+        }, 3);
     }
 
-    // update (dt) {}
+    update (dt) {
+
+    }
 }
