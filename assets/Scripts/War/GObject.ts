@@ -11,8 +11,8 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Object extends cc.Component {
-
+export default class GObject extends cc.Component {
+    
     start () {
 
     }

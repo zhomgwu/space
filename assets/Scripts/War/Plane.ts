@@ -1,4 +1,4 @@
-import Object from "./Object";
+import GObject from "./GObject";
 
 // Learn TypeScript:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/typescript.html
@@ -13,7 +13,7 @@ import Object from "./Object";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Plane extends Object {
+export default class Plane extends GObject {
     
     @property(cc.Sprite)
     m_skin: cc.Sprite = null;
